@@ -26,7 +26,7 @@ public class TerminalDataExecutor implements DataExecutor {
             print(seporator, newLine);
             print(list.get(i), newLine);
             print(seporator, newLine);
-            printAllCatWord(dataHandler.getNumStrings(list.get(i), targetCollection), targetCollection);
+           // printAllCatWord(dataHandler.getNumStrings(list.get(i), targetCollection), targetCollection);
             print(seporator4, newLine);
             print("", next);
         }

@@ -8,7 +8,7 @@ import java.util.*;
 
 public class ConcatenatedWordsFinderImpl extends ConcatenatedWordsFinder {
 
-    private List<String> resultList = new ArrayList<>();
+    static List<String> resultList = new ArrayList<>();
 
 
     public ConcatenatedWordsFinderImpl(DataProvider dataProvider, DataHandler dataHandler, DataExecutor dataExecutor) {
@@ -17,7 +17,8 @@ public class ConcatenatedWordsFinderImpl extends ConcatenatedWordsFinder {
 
     @Override
     protected Collection<String> getAllConcatWodrs(Collection<String> targetCollection) {
-        for (String s : targetCollection) {
+        for (String s : targetCollection
+        ) {
             if (dataHandler.isConcatWord(s, targetCollection)) {
                 resultList.add(s);
             }
@@ -31,5 +32,4 @@ public class ConcatenatedWordsFinderImpl extends ConcatenatedWordsFinder {
         list.sort((o1, o2) -> Integer.compare(o2.length(), o1.length()));
         return list;
     }
-
 }
